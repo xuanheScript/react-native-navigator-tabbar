@@ -1,0 +1,14 @@
+{
+  "name": "react-native-navigator-tabbar",
+  "version": "1.0.0",
+  "description": "navigator-tabbar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lijie123"
+  ],
+  "author": "李杰",
+  "license": "ISC"
+}
