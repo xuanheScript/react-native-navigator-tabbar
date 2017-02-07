@@ -32,7 +32,7 @@ npm install react-native-navigator-tabbar --save
 | title | string | required | title of item |
 | onPress | function | optional | the function will be called when item is selected. you can also use Tabbar's onItemSelected function if you want to control press callback in one place. |
 | badge | number/string | optional | badge |
-| point (Thanks [@WittBulter](https://github.com/WittBulter)) | bool | optional | clipChildren performance |
+| point | bool | optional | clipChildren performance |
 
 ## Usage
 
@@ -85,8 +85,7 @@ import TabBar from 'react-native-navigator-tabbar';
 </TabBar>
 
 ```
-## TODO
-~~TabBar.Item badge~~
+
 
 ## Screenshot
 ![](https://github.com/ngstyle/react-native-tabBar/raw/master/screenshot/screenshot_ios.jpg)
