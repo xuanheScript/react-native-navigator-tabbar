@@ -24,6 +24,7 @@ export default class TabBar extends Component {
         navFontSize: 14,
         navTextColor: 'black',
         navTextColorSelected: '#FF9100',
+        navBarBackgroundColor : '#fff',
     };
 
     static propTypes = {
@@ -34,6 +35,7 @@ export default class TabBar extends Component {
         navTextColor: React.PropTypes.string,
         navTextColorSelected: React.PropTypes.string,
         onItemSelected: React.PropTypes.func,
+        navBarBackgroundColor: React.PropTypes.string,
     };
 
     constructor(props) {
@@ -130,7 +132,7 @@ export default class TabBar extends Component {
                     {contentViews}
                 </View>
 
-                <View style={styles.nav}>
+                <View style={[styles.nav,{backgroundColor:this.props.navBarBackgroundColor}]}>
                     {navs}
                 </View>
             </View>
@@ -185,7 +187,6 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         // borderTopWidth:1,
         borderColor:'#eaeaea',
-        backgroundColor:'#000',
     },
     navItem: {
         flex: 1,
