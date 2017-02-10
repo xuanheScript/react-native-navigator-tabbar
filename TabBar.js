@@ -117,6 +117,7 @@ export default class TabBar extends Component {
                     const style = this.state.selectedIndex === i ? styles.base : [styles.base,styles.gone];
                     return (
                         <View
+                            pointerEvents={this.state.selectedIndex === i ? 'auto' : 'none'}
                             key={'view_' + i}
                             style={style}>
                             {child}
@@ -179,8 +180,9 @@ const styles = StyleSheet.create({
         bottom: 0,
     },
     gone: {
-        top: Dimensions.get('window').height,
-        bottom: -Dimensions.get('window').height,
+        // top: Dimensions.get('window').height,
+        // bottom: -Dimensions.get('window').height,
+        opacity: 0,
     },
     nav: {
         flexDirection: 'row',
