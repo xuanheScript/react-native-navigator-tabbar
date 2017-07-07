@@ -25,6 +25,7 @@ export default class TabBar extends Component {
         navTextColor: 'black',
         navTextColorSelected: '#FF9100',
         navBarBackgroundColor : '#fff',
+        navBarStyle : undefined,
     };
 
     static propTypes = {
@@ -36,6 +37,7 @@ export default class TabBar extends Component {
         navTextColorSelected: React.PropTypes.string,
         onItemSelected: React.PropTypes.func,
         navBarBackgroundColor: React.PropTypes.string,
+        navBarStyle : View.propTypes.style,
     };
 
     constructor(props) {
@@ -133,7 +135,7 @@ export default class TabBar extends Component {
                     {contentViews}
                 </View>
 
-                <View style={[styles.nav,{backgroundColor:this.props.navBarBackgroundColor}]}>
+                <View style={[styles.nav,this.props.navBarStyle,{backgroundColor:this.props.navBarBackgroundColor}]}>
                     {navs}
                 </View>
             </View>
